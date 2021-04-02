@@ -29,28 +29,22 @@ class TransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning {
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-//        let animator = interruptibleAnimator(using: transitionContext)
-//        animator.startAnimation()
-        if let animator = animator {
-            animator.startAnimation()
-        }
-        let animator = setupAnimator(using: transitionContext)
-        self.animator = animator
+        let animator = interruptibleAnimator(using: transitionContext)
         animator.startAnimation()
     }
 
     func animationEnded(_ transitionCompleted: Bool) {
-        animator?.stopAnimation(transitionCompleted)
+        animator = nil
     }
 
-//    func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
-//        if let animator = animator {
-//            return animator
-//        }
-//
-//        let interruptibleAnimator = setupAnimator(using: transitionContext)
-//        animator = interruptibleAnimator
-//        return interruptibleAnimator
-//    }
+    func interruptibleAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewImplicitlyAnimating {
+        if let animator = animator {
+            return animator
+        }
+
+        let interruptibleAnimator = setupAnimator(using: transitionContext)
+        animator = interruptibleAnimator
+        return interruptibleAnimator
+    }
 }
 

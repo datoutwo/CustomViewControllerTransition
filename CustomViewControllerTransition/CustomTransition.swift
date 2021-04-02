@@ -9,19 +9,24 @@ import UIKit
 
 final class CustomTransition: NSObject, UIViewControllerTransitioningDelegate {
     private let appearAnimation: TransitionAnimation?
-    private let disAppearAnimation: TransitionAnimation?
+    private let disappearAnimation: TransitionAnimation?
+    private let interactive: InteractiveAnimation?
 
-    init(appearAnimation: TransitionAnimation? = nil, disAppearAnimation: TransitionAnimation? = nil) {
+    init(appearAnimation: TransitionAnimation? = nil, disappearAnimation: TransitionAnimation? = nil, interactive: InteractiveAnimation? = nil) {
         self.appearAnimation = appearAnimation
-        self.disAppearAnimation = disAppearAnimation
+        self.disappearAnimation = disappearAnimation
+        self.interactive = interactive
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return appearAnimation//TransitionFlip(transitionType: .appear, duration: 1.0)
+        return appearAnimation
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return disAppearAnimation//TransitionFlip(transitionType: .disappear, duration: 1.0)
+        return disappearAnimation
+    }
+
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactive
     }
 }
-

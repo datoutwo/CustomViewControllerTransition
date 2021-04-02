@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F141591261793F2007F3542 /* InteractiveLeftGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F141590261793F2007F3542 /* InteractiveLeftGesture.swift */; };
 		7F381F5A2607A7C9006BAD91 /* TransitionZoomIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F592607A7C9006BAD91 /* TransitionZoomIn.swift */; };
 		7F381F5F2607A91D006BAD91 /* TransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F5E2607A91D006BAD91 /* TransitionAnimation.swift */; };
 		7F381F632607BF95006BAD91 /* TransitionZoomOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F622607BF95006BAD91 /* TransitionZoomOut.swift */; };
 		7F381F662607DFAF006BAD91 /* TransitionDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F652607DFAF006BAD91 /* TransitionDropDown.swift */; };
 		7F381F692607E0C2006BAD91 /* TransitionCrossDissolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F682607E0C2006BAD91 /* TransitionCrossDissolve.swift */; };
 		7F381F6C2607E1B2006BAD91 /* TransitionFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F6B2607E1B2006BAD91 /* TransitionFlip.swift */; };
+		7F381F8226173508006BAD91 /* InteractiveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F8126173508006BAD91 /* InteractiveAnimation.swift */; };
 		7F7AD66625FD190A00365C44 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7AD66525FD190A00365C44 /* MenuCell.xib */; };
 		7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD66925FD280A00365C44 /* MenuData.swift */; };
 		7F7AD66E25FD311200365C44 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD66D25FD311200365C44 /* MenuDetailViewController.swift */; };
@@ -37,12 +39,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F141590261793F2007F3542 /* InteractiveLeftGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveLeftGesture.swift; sourceTree = "<group>"; };
 		7F381F592607A7C9006BAD91 /* TransitionZoomIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionZoomIn.swift; sourceTree = "<group>"; };
 		7F381F5E2607A91D006BAD91 /* TransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionAnimation.swift; sourceTree = "<group>"; };
 		7F381F622607BF95006BAD91 /* TransitionZoomOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionZoomOut.swift; sourceTree = "<group>"; };
 		7F381F652607DFAF006BAD91 /* TransitionDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionDropDown.swift; sourceTree = "<group>"; };
 		7F381F682607E0C2006BAD91 /* TransitionCrossDissolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCrossDissolve.swift; sourceTree = "<group>"; };
 		7F381F6B2607E1B2006BAD91 /* TransitionFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFlip.swift; sourceTree = "<group>"; };
+		7F381F8126173508006BAD91 /* InteractiveAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAnimation.swift; sourceTree = "<group>"; };
 		7F7AD66525FD190A00365C44 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		7F7AD66925FD280A00365C44 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		7F7AD66D25FD311200365C44 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +96,15 @@
 			path = Transition;
 			sourceTree = "<group>";
 		};
+		7F381F8426173A53006BAD91 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				7F381F8126173508006BAD91 /* InteractiveAnimation.swift */,
+				7F141590261793F2007F3542 /* InteractiveLeftGesture.swift */,
+			);
+			path = Interactive;
+			sourceTree = "<group>";
+		};
 		7F7AD67025FD311B00365C44 /* MenuDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 				7FCAC4B825EAE15E00D07930 /* Utils */,
 				7F7AD67D25FE8DA600365C44 /* CustomTransition.swift */,
 				7F381F5C2607A7CE006BAD91 /* Transition */,
+				7F381F8426173A53006BAD91 /* Interactive */,
 			);
 			path = CustomViewControllerTransition;
 			sourceTree = "<group>";
@@ -251,7 +265,9 @@
 			files = (
 				7F7AD67E25FE8DA600365C44 /* CustomTransition.swift in Sources */,
 				7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */,
+				7F141591261793F2007F3542 /* InteractiveLeftGesture.swift in Sources */,
 				7FCAC49B25EAD14300D07930 /* MenuViewController.swift in Sources */,
+				7F381F8226173508006BAD91 /* InteractiveAnimation.swift in Sources */,
 				7FCAC4C425EBEB4E00D07930 /* MenuFactory.swift in Sources */,
 				7F381F662607DFAF006BAD91 /* TransitionDropDown.swift in Sources */,
 				7F381F5A2607A7C9006BAD91 /* TransitionZoomIn.swift in Sources */,
