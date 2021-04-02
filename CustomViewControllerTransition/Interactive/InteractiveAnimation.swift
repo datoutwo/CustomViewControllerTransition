@@ -23,6 +23,7 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
         self.targetViewController = targetViewController
         super.init()
         prepareGestureRecognizer(in: targetViewController.view)
+        wantsInteractiveStart = false
     }
     
     func prepareGestureRecognizer(in view: UIView) {
