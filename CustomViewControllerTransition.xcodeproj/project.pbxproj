@@ -21,7 +21,7 @@
 		7F7AD67225FD313800365C44 /* MenuDetailViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67125FD313800365C44 /* MenuDetailViewControllerFactory.swift */; };
 		7F7AD67825FD314F00365C44 /* MenuDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67725FD314F00365C44 /* MenuDetailPresenter.swift */; };
 		7F7AD67B25FD316D00365C44 /* MenuDetailViewControllerArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67A25FD316D00365C44 /* MenuDetailViewControllerArgs.swift */; };
-		7F7AD67E25FE8DA600365C44 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67D25FE8DA600365C44 /* CustomTransition.swift */; };
+		7F7AD67E25FE8DA600365C44 /* CustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */; };
 		7F952BDB26183D95001CC17A /* InteractiveRightGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BDA26183D95001CC17A /* InteractiveRightGesture.swift */; };
 		7F952BDE26183DA2001CC17A /* InteractiveUpGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BDD26183DA2001CC17A /* InteractiveUpGesture.swift */; };
 		7F952BE126183DE4001CC17A /* InteractiveDownGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BE026183DE4001CC17A /* InteractiveDownGesture.swift */; };
@@ -59,7 +59,7 @@
 		7F7AD67125FD313800365C44 /* MenuDetailViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewControllerFactory.swift; sourceTree = "<group>"; };
 		7F7AD67725FD314F00365C44 /* MenuDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailPresenter.swift; sourceTree = "<group>"; };
 		7F7AD67A25FD316D00365C44 /* MenuDetailViewControllerArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewControllerArgs.swift; sourceTree = "<group>"; };
-		7F7AD67D25FE8DA600365C44 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimation.swift; sourceTree = "<group>"; };
 		7F952BDA26183D95001CC17A /* InteractiveRightGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveRightGesture.swift; sourceTree = "<group>"; };
 		7F952BDD26183DA2001CC17A /* InteractiveUpGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveUpGesture.swift; sourceTree = "<group>"; };
 		7F952BE026183DE4001CC17A /* InteractiveDownGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveDownGesture.swift; sourceTree = "<group>"; };
@@ -165,7 +165,7 @@
 				7FCAC49C25EAD14300D07930 /* Main.storyboard */,
 				7FCAC4BB25EAE17C00D07930 /* Resources */,
 				7FCAC4B825EAE15E00D07930 /* Utils */,
-				7F7AD67D25FE8DA600365C44 /* CustomTransition.swift */,
+				7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */,
 				7F381F5C2607A7CE006BAD91 /* Transition */,
 				7F381F8426173A53006BAD91 /* Interactive */,
 			);
@@ -290,7 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F952BE126183DE4001CC17A /* InteractiveDownGesture.swift in Sources */,
-				7F7AD67E25FE8DA600365C44 /* CustomTransition.swift in Sources */,
+				7F7AD67E25FE8DA600365C44 /* CustomAnimation.swift in Sources */,
 				7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */,
 				7F141591261793F2007F3542 /* InteractiveLeftGesture.swift in Sources */,
 				7F952BDB26183D95001CC17A /* InteractiveRightGesture.swift in Sources */,

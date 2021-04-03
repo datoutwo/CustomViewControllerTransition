@@ -17,9 +17,9 @@ final class MenuRouter: MenuRouterProtocol {
     weak var view: MenuViewController?
     private let menuDetailViewControllerFactory: MenuDetailViewControllerFactoryProtocol
     private let infoViewControllerFactory: InfoViewControllerFactoryProtocol
-    private var detailTransition: CustomTransition?
-    private var popInfoTransition: CustomTransition?
-    private var showInfoTransition: CustomTransition?
+    private var detailTransition: CustomAnimation?
+    private var popInfoTransition: CustomAnimation?
+    private var showInfoTransition: CustomAnimation?
 
     init(
         menuDetailViewControllerFactory: MenuDetailViewControllerFactoryProtocol,
@@ -31,10 +31,10 @@ final class MenuRouter: MenuRouterProtocol {
 
     func openDetail(args: MenuDetailViewControllerArgs) {
         let menuDetailViewController = menuDetailViewControllerFactory.make(args: args)
-        let interactive = InteractiveAnimation(targetViewController: menuDetailViewController, direction: .down, interactiveType: .presentation)
+        let interactive = InteractiveDownGesture(targetViewController: menuDetailViewController, interactiveType: .presentation)
         let appearFlip = TransitionFlip(transitionType: .appear, duration: 1.0)
         let disappearFlip = TransitionFlip(transitionType: .disappear, duration: 1.0)
-        self.detailTransition = CustomTransition(appearAnimation: appearFlip, disappearAnimation: disappearFlip, disappearInteractive: interactive)
+        self.detailTransition = CustomAnimation(appearAnimation: appearFlip, disappearAnimation: disappearFlip, disappearInteractive: interactive)
         menuDetailViewController.transitioningDelegate = detailTransition
         menuDetailViewController.modalPresentationStyle = .fullScreen
         view?.navigationController?.present(menuDetailViewController, animated: true, completion: nil)
@@ -45,8 +45,8 @@ final class MenuRouter: MenuRouterProtocol {
         let interactive = InteractiveRightGesture(targetViewController: infoViewController, interactiveType: .navigation)
         let zoomIn = TransitionZoomIn(transitionType: .appear, duration: 1.0)
         let zoomOut = TransitionZoomOut(transitionType: .disappear, duration: 1.0)
-        self.popInfoTransition = CustomTransition(disappearAnimation: zoomOut, appearInteractive: interactive)
-        self.showInfoTransition = CustomTransition(appearAnimation: zoomIn)
+        self.showInfoTransition = CustomAnimation(appearAnimation: zoomIn)
+        self.popInfoTransition = CustomAnimation(disappearAnimation: zoomOut, disappearInteractive: interactive)
         view?.navigationController?.delegate = showInfoTransition
         view?.navigationController?.show(infoViewController, sender: nil)
         infoViewController.navigationController?.delegate = popInfoTransition

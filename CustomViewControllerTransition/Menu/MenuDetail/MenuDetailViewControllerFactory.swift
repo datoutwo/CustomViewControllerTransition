@@ -12,7 +12,6 @@ protocol MenuDetailViewControllerFactoryProtocol {
 }
 
 final class MenuDetailViewControllerFactory: MenuDetailViewControllerFactoryProtocol {
-
     func make(args: MenuDetailViewControllerArgs) -> MenuDetailViewController {
         guard let menuDetailViewController = MenuDetailViewController.loadFromStoryBoard() else {
             fatalError()

@@ -39,11 +39,15 @@ final class MenuViewController: UIViewController, MenuView {
     }
 }
 
+// MARK: - private
+
 extension MenuViewController {
     @objc private func didTapGo() {
         presenter.notifyDidTapGoButton()
     }
 }
+
+// MARK: - StoryboardLoadable
 
 extension MenuViewController: StoryboardLoadable {
     static var storyboard: MenuStoryboard = .main

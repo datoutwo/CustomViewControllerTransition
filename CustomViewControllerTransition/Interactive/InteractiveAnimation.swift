@@ -22,8 +22,8 @@ enum InteractiveGestureDirection {
 class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
     private weak var targetViewController: UIViewController?
     private let interactiveType: InteractiveType
-    private var direction: InteractiveGestureDirection
-    var shouldCompleteTransition: Bool = false
+    private let direction: InteractiveGestureDirection
+
     var viewWidth: CGFloat {
         return targetViewController?.view.frame.width ?? 400.0
     }
@@ -32,7 +32,11 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
         return targetViewController?.view.frame.height ?? 800.0
     }
 
-    init(targetViewController: UIViewController, direction: InteractiveGestureDirection, interactiveType: InteractiveType) {
+    init(
+        targetViewController: UIViewController,
+        interactiveType: InteractiveType,
+        direction: InteractiveGestureDirection
+    ) {
         self.interactiveType = interactiveType
         self.direction = direction
         self.targetViewController = targetViewController
@@ -47,13 +51,19 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
         view.addGestureRecognizer(gesture)
     }
     
-    func shouldCompleteTransition(distance: CGFloat, velocity: CGFloat) -> Bool {
+    func shouldCompleteTransition(
+        distance: CGFloat,
+        velocity: CGFloat
+    ) -> Bool {
         let progress = distance / viewWidth
         let percentage = min(max(progress, 0.0), 1.0)
         return percentage > 0.5
     }
 
-    func getProgress(distance: CGFloat, velocity: CGFloat) -> CGFloat {
+    func getProgress(
+        distance: CGFloat,
+        velocity: CGFloat
+    ) -> CGFloat {
         return distance / viewWidth
     }
     
@@ -101,6 +111,7 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
 }
 
 // MARK: - private
+
 extension InteractiveAnimation {
     private func dismissView() {
         switch interactiveType {
@@ -113,8 +124,8 @@ extension InteractiveAnimation {
 }
 
 // MARK: - UIGestureRecognizerDelegate
+
 extension InteractiveAnimation: UIGestureRecognizerDelegate {
-    
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }

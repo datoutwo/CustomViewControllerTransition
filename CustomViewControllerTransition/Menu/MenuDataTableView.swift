@@ -19,10 +19,11 @@ final class MenuDataTableView: NSObject, MenuDataTableViewProtocol {
         MenuData(title: "Sea Turtle", description: "This is Sea Turtle", image: UIImage(named: "D")),
         MenuData(title: "Beach", description: "This is Beach", image: UIImage(named: "E"))
     ]
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let data = tableData[indexPath.row]
         let cellVM = MenuCellViewModel(data: data)

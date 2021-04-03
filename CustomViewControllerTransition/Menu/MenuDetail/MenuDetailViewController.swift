@@ -33,7 +33,8 @@ final class MenuDetailViewController: UIViewController, MenuDetailView  {
     }
 }
 
-// MARK: -
+// MARK: - StoryboardLoadable
+
 extension MenuDetailViewController: StoryboardLoadable {
     static var storyboard: MenuStoryboard = .main
 }
