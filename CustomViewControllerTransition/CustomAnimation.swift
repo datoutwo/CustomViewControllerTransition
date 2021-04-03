@@ -8,18 +8,10 @@
 import UIKit
 
 final class CustomAnimation: NSObject {
-    private let appearAnimation: TransitionAnimation?
-    private let disappearAnimation: TransitionAnimation?
-    private let disappearInteractive: InteractiveAnimation?
+    private let interactive: InteractiveAnimation?
 
-    init(
-        appearAnimation: TransitionAnimation? = nil,
-        disappearAnimation: TransitionAnimation? = nil,
-        disappearInteractive: InteractiveAnimation? = nil
-    ) {
-        self.appearAnimation = appearAnimation
-        self.disappearAnimation = disappearAnimation
-        self.disappearInteractive = disappearInteractive
+    init(interactive: InteractiveAnimation? = nil) {
+        self.interactive = interactive
     }
 }
 
@@ -27,15 +19,15 @@ final class CustomAnimation: NSObject {
 
 extension CustomAnimation: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return appearAnimation
+        return (presented as? TransitionAnimationViewController)?.appearingTransition
     }
 
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return disappearAnimation
+        return (dismissed as? TransitionAnimationViewController)?.disappearingTransition
     }
 
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return disappearInteractive
+        return interactive
     }
 }
 
@@ -45,13 +37,13 @@ extension CustomAnimation: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         switch operation {
         case .push:
-            return appearAnimation
+            return (toVC as? TransitionAnimationViewController)?.appearingTransition
         default:
-            return disappearAnimation
+            return (fromVC as? TransitionAnimationViewController)?.disappearingTransition
         }
     }
 
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return disappearInteractive
+        return interactive
     }
 }

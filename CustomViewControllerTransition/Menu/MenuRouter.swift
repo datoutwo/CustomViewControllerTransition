@@ -32,9 +32,7 @@ final class MenuRouter: MenuRouterProtocol {
     func openDetail(args: MenuDetailViewControllerArgs) {
         let menuDetailViewController = menuDetailViewControllerFactory.make(args: args)
         let interactive = InteractiveDownGesture(targetViewController: menuDetailViewController, interactiveType: .presentation)
-        let appearFlip = TransitionFlip(transitionType: .appear, duration: 1.0)
-        let disappearFlip = TransitionFlip(transitionType: .disappear, duration: 1.0)
-        self.detailTransition = CustomAnimation(appearAnimation: appearFlip, disappearAnimation: disappearFlip, disappearInteractive: interactive)
+        self.detailTransition = CustomAnimation(interactive: interactive)
         menuDetailViewController.transitioningDelegate = detailTransition
         menuDetailViewController.modalPresentationStyle = .fullScreen
         view?.navigationController?.present(menuDetailViewController, animated: true, completion: nil)
@@ -43,11 +41,8 @@ final class MenuRouter: MenuRouterProtocol {
     func openInfo() {
         let infoViewController = infoViewControllerFactory.make()
         let interactive = InteractiveRightGesture(targetViewController: infoViewController, interactiveType: .navigation)
-        let zoomIn = TransitionZoomIn(transitionType: .appear, duration: 1.0)
-        let zoomOut = TransitionZoomOut(transitionType: .disappear, duration: 1.0)
-        self.showInfoTransition = CustomAnimation(appearAnimation: zoomIn)
-        self.popInfoTransition = CustomAnimation(disappearAnimation: zoomOut, disappearInteractive: interactive)
-        view?.navigationController?.delegate = showInfoTransition
+        self.showInfoTransition = CustomAnimation(interactive: interactive)
+        view?.navigationController?.delegate = popInfoTransition
         view?.navigationController?.show(infoViewController, sender: nil)
         infoViewController.navigationController?.delegate = popInfoTransition
     }

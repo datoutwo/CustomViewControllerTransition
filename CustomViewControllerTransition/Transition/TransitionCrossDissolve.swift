@@ -20,6 +20,7 @@ class TransitionCrossDissolve: TransitionAnimation {
     }
     
     override func setupAnimator(using transitionContext: UIViewControllerContextTransitioning) -> UIViewPropertyAnimator {
+        super.setupTransitionInitialState(using: transitionContext)
         guard
             let fromView = transitionContext.view(forKey: .from),
             let toView = transitionContext.view(forKey: .to) else {

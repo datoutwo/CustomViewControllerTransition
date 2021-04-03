@@ -52,3 +52,23 @@ extension MenuViewController {
 extension MenuViewController: StoryboardLoadable {
     static var storyboard: MenuStoryboard = .main
 }
+
+// MARK: - TransitionAnimationProtocol
+
+extension MenuViewController: TransitionAnimationProtocol {
+    var appearingTransition: TransitionAnimation? {
+        return TransitionZoomIn(transitionType: .appear, duration: 1.0)
+    }
+    
+    var disappearingTransition: TransitionAnimation? {
+        return nil
+    }
+    
+    var transitionFrame: CGRect? {
+        return nil
+    }
+    
+    func transitionDidStart(_ type: TransitionType) {}
+    
+    func transitionDidEnd(_ type: TransitionType) {}
+}
