@@ -29,6 +29,7 @@
 		7F952BE926188BFA001CC17A /* InfoViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BE826188BFA001CC17A /* InfoViewControllerFactory.swift */; };
 		7F952BEC26188C05001CC17A /* InfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BEB26188C05001CC17A /* InfoPresenter.swift */; };
 		7F952BF02618BAA5001CC17A /* TransitionCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BEF2618BAA5001CC17A /* TransitionCellStyle.swift */; };
+		7F952BF6261908D2001CC17A /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BF5261908D2001CC17A /* CustomNavigationController.swift */; };
 		7FCAC49725EAD14300D07930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAC49625EAD14300D07930 /* AppDelegate.swift */; };
 		7FCAC49B25EAD14300D07930 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAC49A25EAD14300D07930 /* MenuViewController.swift */; };
 		7FCAC49E25EAD14300D07930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCAC49C25EAD14300D07930 /* Main.storyboard */; };
@@ -68,6 +69,7 @@
 		7F952BE826188BFA001CC17A /* InfoViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerFactory.swift; sourceTree = "<group>"; };
 		7F952BEB26188C05001CC17A /* InfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPresenter.swift; sourceTree = "<group>"; };
 		7F952BEF2618BAA5001CC17A /* TransitionCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCellStyle.swift; sourceTree = "<group>"; };
+		7F952BF5261908D2001CC17A /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		7FCAC49325EAD14300D07930 /* CustomViewControllerTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewControllerTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCAC49625EAD14300D07930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCAC49A25EAD14300D07930 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				7FCAC49625EAD14300D07930 /* AppDelegate.swift */,
+				7F952BF5261908D2001CC17A /* CustomNavigationController.swift */,
 				7FCAC4BD25EAE1B700D07930 /* Menu */,
 				7FCAC49C25EAD14300D07930 /* Main.storyboard */,
 				7FCAC4BB25EAE17C00D07930 /* Resources */,
@@ -292,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F952BF6261908D2001CC17A /* CustomNavigationController.swift in Sources */,
 				7F952BE126183DE4001CC17A /* InteractiveDownGesture.swift in Sources */,
 				7F7AD67E25FE8DA600365C44 /* CustomAnimation.swift in Sources */,
 				7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */,

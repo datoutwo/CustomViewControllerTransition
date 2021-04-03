@@ -18,7 +18,6 @@ final class MenuRouter: MenuRouterProtocol {
     private let menuDetailViewControllerFactory: MenuDetailViewControllerFactoryProtocol
     private let infoViewControllerFactory: InfoViewControllerFactoryProtocol
     private var detailTransition: CustomAnimation?
-    private var popInfoTransition: CustomAnimation?
     private var showInfoTransition: CustomAnimation?
 
     init(

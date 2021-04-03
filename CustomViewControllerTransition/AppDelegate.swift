@@ -28,7 +28,7 @@ extension AppDelegate {
             infoViewControllerFactory: infoViewControllerFactory
         )
         let menuViewController = factory.make()
-        let root = UINavigationController(rootViewController: menuViewController)
+        let root = CustomNavigationController(rootViewController: menuViewController)
         window = UIWindow()
         window?.rootViewController = root
         window?.makeKeyAndVisible()
