@@ -1,16 +1,16 @@
 //
-//  InteractiveLeftGesture.swift
+//  InteractiveRightGesture.swift
 //  CustomViewControllerTransition
 //
-//  Created by Delan Wang on 2021/4/2.
+//  Created by Delan Wang on 2021/4/3.
 //
 
 import UIKit
 
-final class InteractiveLeftGesture: InteractiveAnimation {
+final class InteractiveRightGesture: InteractiveAnimation {
     
     init(targetViewController: UIViewController, interactiveType: InteractiveType) {
-        super.init(targetViewController: targetViewController, direction: .left, interactiveType: interactiveType)
+        super.init(targetViewController: targetViewController, direction: .right, interactiveType: interactiveType)
     }
 
     @objc override func handleGesture(_ gestureRecognizer: UIPanGestureRecognizer) {

@@ -22,6 +22,12 @@
 		7F7AD67825FD314F00365C44 /* MenuDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67725FD314F00365C44 /* MenuDetailPresenter.swift */; };
 		7F7AD67B25FD316D00365C44 /* MenuDetailViewControllerArgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67A25FD316D00365C44 /* MenuDetailViewControllerArgs.swift */; };
 		7F7AD67E25FE8DA600365C44 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD67D25FE8DA600365C44 /* CustomTransition.swift */; };
+		7F952BDB26183D95001CC17A /* InteractiveRightGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BDA26183D95001CC17A /* InteractiveRightGesture.swift */; };
+		7F952BDE26183DA2001CC17A /* InteractiveUpGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BDD26183DA2001CC17A /* InteractiveUpGesture.swift */; };
+		7F952BE126183DE4001CC17A /* InteractiveDownGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BE026183DE4001CC17A /* InteractiveDownGesture.swift */; };
+		7F952BE426188B8D001CC17A /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BE326188B8D001CC17A /* InfoViewController.swift */; };
+		7F952BE926188BFA001CC17A /* InfoViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BE826188BFA001CC17A /* InfoViewControllerFactory.swift */; };
+		7F952BEC26188C05001CC17A /* InfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BEB26188C05001CC17A /* InfoPresenter.swift */; };
 		7FCAC49725EAD14300D07930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAC49625EAD14300D07930 /* AppDelegate.swift */; };
 		7FCAC49B25EAD14300D07930 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAC49A25EAD14300D07930 /* MenuViewController.swift */; };
 		7FCAC49E25EAD14300D07930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCAC49C25EAD14300D07930 /* Main.storyboard */; };
@@ -54,6 +60,12 @@
 		7F7AD67725FD314F00365C44 /* MenuDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailPresenter.swift; sourceTree = "<group>"; };
 		7F7AD67A25FD316D00365C44 /* MenuDetailViewControllerArgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewControllerArgs.swift; sourceTree = "<group>"; };
 		7F7AD67D25FE8DA600365C44 /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
+		7F952BDA26183D95001CC17A /* InteractiveRightGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveRightGesture.swift; sourceTree = "<group>"; };
+		7F952BDD26183DA2001CC17A /* InteractiveUpGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveUpGesture.swift; sourceTree = "<group>"; };
+		7F952BE026183DE4001CC17A /* InteractiveDownGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveDownGesture.swift; sourceTree = "<group>"; };
+		7F952BE326188B8D001CC17A /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		7F952BE826188BFA001CC17A /* InfoViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewControllerFactory.swift; sourceTree = "<group>"; };
+		7F952BEB26188C05001CC17A /* InfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPresenter.swift; sourceTree = "<group>"; };
 		7FCAC49325EAD14300D07930 /* CustomViewControllerTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewControllerTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCAC49625EAD14300D07930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCAC49A25EAD14300D07930 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +113,9 @@
 			children = (
 				7F381F8126173508006BAD91 /* InteractiveAnimation.swift */,
 				7F141590261793F2007F3542 /* InteractiveLeftGesture.swift */,
+				7F952BDA26183D95001CC17A /* InteractiveRightGesture.swift */,
+				7F952BDD26183DA2001CC17A /* InteractiveUpGesture.swift */,
+				7F952BE026183DE4001CC17A /* InteractiveDownGesture.swift */,
 			);
 			path = Interactive;
 			sourceTree = "<group>";
@@ -114,6 +129,16 @@
 				7F7AD67A25FD316D00365C44 /* MenuDetailViewControllerArgs.swift */,
 			);
 			path = MenuDetail;
+			sourceTree = "<group>";
+		};
+		7F952BE626188B95001CC17A /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				7F952BE326188B8D001CC17A /* InfoViewController.swift */,
+				7F952BEB26188C05001CC17A /* InfoPresenter.swift */,
+				7F952BE826188BFA001CC17A /* InfoViewControllerFactory.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		7FCAC48A25EAD14300D07930 = {
@@ -178,6 +203,7 @@
 				7F7AD66925FD280A00365C44 /* MenuData.swift */,
 				7FCAC4D325EC197E00D07930 /* Cell */,
 				7F7AD67025FD311B00365C44 /* MenuDetail */,
+				7F952BE626188B95001CC17A /* Info */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -263,10 +289,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F952BE126183DE4001CC17A /* InteractiveDownGesture.swift in Sources */,
 				7F7AD67E25FE8DA600365C44 /* CustomTransition.swift in Sources */,
 				7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */,
 				7F141591261793F2007F3542 /* InteractiveLeftGesture.swift in Sources */,
+				7F952BDB26183D95001CC17A /* InteractiveRightGesture.swift in Sources */,
 				7FCAC49B25EAD14300D07930 /* MenuViewController.swift in Sources */,
+				7F952BDE26183DA2001CC17A /* InteractiveUpGesture.swift in Sources */,
+				7F952BE926188BFA001CC17A /* InfoViewControllerFactory.swift in Sources */,
 				7F381F8226173508006BAD91 /* InteractiveAnimation.swift in Sources */,
 				7FCAC4C425EBEB4E00D07930 /* MenuFactory.swift in Sources */,
 				7F381F662607DFAF006BAD91 /* TransitionDropDown.swift in Sources */,
@@ -275,6 +305,7 @@
 				7FCAC4CB25EBEFD100D07930 /* MenuRouter.swift in Sources */,
 				7F7AD67825FD314F00365C44 /* MenuDetailPresenter.swift in Sources */,
 				7F381F5F2607A91D006BAD91 /* TransitionAnimation.swift in Sources */,
+				7F952BEC26188C05001CC17A /* InfoPresenter.swift in Sources */,
 				7F7AD67B25FD316D00365C44 /* MenuDetailViewControllerArgs.swift in Sources */,
 				7F381F632607BF95006BAD91 /* TransitionZoomOut.swift in Sources */,
 				7FCAC4D625EC199000D07930 /* MenuCellViewModel.swift in Sources */,
@@ -288,6 +319,7 @@
 				7FCAC4AD25EADB3A00D07930 /* InspectableView.swift in Sources */,
 				7FCAC49725EAD14300D07930 /* AppDelegate.swift in Sources */,
 				7F7AD67225FD313800365C44 /* MenuDetailViewControllerFactory.swift in Sources */,
+				7F952BE426188B8D001CC17A /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

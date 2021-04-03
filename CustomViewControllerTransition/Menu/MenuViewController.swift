@@ -14,6 +14,16 @@ protocol MenuView: class {
 final class MenuViewController: UIViewController, MenuView {
     var presenter: MenuPresenterProtocol!
     var source: MenuDataTableViewProtocol!
+
+    private lazy var headerButton: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 40))
+        button.backgroundColor = .blue
+        button.setTitle("GO", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 12
+        button.addTarget(self, action: #selector(didTapGo), for: .touchUpInside)
+        return button
+    }()
     @IBOutlet private var tableView: UITableView!
 
     override func viewDidLoad() {
@@ -25,6 +35,13 @@ final class MenuViewController: UIViewController, MenuView {
         tableView.delegate = source
         tableView.dataSource = source
         tableView.register(MenuCell.loadNib(), forCellReuseIdentifier: MenuCell.identifier)
+        tableView.tableHeaderView = headerButton
+    }
+}
+
+extension MenuViewController {
+    @objc private func didTapGo() {
+        presenter.notifyDidTapGoButton()
     }
 }
 

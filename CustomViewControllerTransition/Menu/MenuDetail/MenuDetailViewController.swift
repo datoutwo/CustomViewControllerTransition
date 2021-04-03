@@ -12,7 +12,7 @@ protocol MenuDetailView: AnyObject {
 }
 
 final class MenuDetailViewController: UIViewController, MenuDetailView  {
-    var presenter: MenuDetailPresenter!
+    var presenter: MenuDetailPresenterProtocol!
     
     @IBOutlet private var imageView: UIImageView!
     @IBOutlet private var titleLabel: UILabel!

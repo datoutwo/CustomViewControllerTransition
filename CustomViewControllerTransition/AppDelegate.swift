@@ -22,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     private func showMenuViewController() {
         let menuDetailViewControllerFactory = MenuDetailViewControllerFactory()
-        let factory = MenuFactory(menuDetailViewControllerFactory: menuDetailViewControllerFactory)
+        let infoViewControllerFactory = InfoViewControllerFactory()
+        let factory = MenuFactory(
+            menuDetailViewControllerFactory: menuDetailViewControllerFactory,
+            infoViewControllerFactory: infoViewControllerFactory
+        )
         let menuViewController = factory.make()
         let root = UINavigationController(rootViewController: menuViewController)
         window = UIWindow()

@@ -12,10 +12,15 @@ protocol MenuFactoryProtocol {
 }
 
 final class MenuFactory: MenuFactoryProtocol {
-    private let menuDetailViewControllerFactory: MenuDetailViewControllerFactory
-
-    init(menuDetailViewControllerFactory: MenuDetailViewControllerFactory) {
+    private let menuDetailViewControllerFactory: MenuDetailViewControllerFactoryProtocol
+    private let infoViewControllerFactory: InfoViewControllerFactoryProtocol
+    
+    init(
+        menuDetailViewControllerFactory: MenuDetailViewControllerFactoryProtocol,
+        infoViewControllerFactory: InfoViewControllerFactoryProtocol
+    ) {
         self.menuDetailViewControllerFactory = menuDetailViewControllerFactory
+        self.infoViewControllerFactory = infoViewControllerFactory
     }
 
     func make() -> MenuViewController {
@@ -23,7 +28,10 @@ final class MenuFactory: MenuFactoryProtocol {
             fatalError()
         }
         let data = MenuDataTableView()
-        let router = MenuRouter(menuDetailViewControllerFactory: menuDetailViewControllerFactory)
+        let router = MenuRouter(
+            menuDetailViewControllerFactory: menuDetailViewControllerFactory,
+            infoViewControllerFactory: infoViewControllerFactory
+        )
         let presenter = MenuPresenter(router: router)
         presenter.view = menuViewController
         menuViewController.presenter = presenter

@@ -7,6 +7,11 @@
 
 import UIKit
 
+enum InteractiveType {
+    case navigation
+    case presentation
+}
+
 enum InteractiveGestureDirection {
     case up
     case left
@@ -16,9 +21,19 @@ enum InteractiveGestureDirection {
 
 class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
     private weak var targetViewController: UIViewController?
+    private let interactiveType: InteractiveType
     private var direction: InteractiveGestureDirection
     var shouldCompleteTransition: Bool = false
-    init(targetViewController: UIViewController, direction: InteractiveGestureDirection) {
+    var viewWidth: CGFloat {
+        return targetViewController?.view.frame.width ?? 400.0
+    }
+
+    var viewHeight: CGFloat {
+        return targetViewController?.view.frame.height ?? 800.0
+    }
+
+    init(targetViewController: UIViewController, direction: InteractiveGestureDirection, interactiveType: InteractiveType) {
+        self.interactiveType = interactiveType
         self.direction = direction
         self.targetViewController = targetViewController
         super.init()
@@ -33,13 +48,26 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
     }
     
     func shouldCompleteTransition(distance: CGFloat, velocity: CGFloat) -> Bool {
-        let progress = distance / 400.0
+        let progress = distance / viewWidth
         let percentage = min(max(progress, 0.0), 1.0)
         return percentage > 0.5
     }
 
     func getProgress(distance: CGFloat, velocity: CGFloat) -> CGFloat {
-        return distance / 400.0
+        return distance / viewWidth
+    }
+    
+    func computeGestureValue(by point: CGPoint) -> CGFloat {
+        switch direction {
+        case .up:
+            return -point.y
+        case .down:
+            return point.y
+        case .left:
+            return -point.x
+        case .right:
+            return point.x
+        }
     }
     
     @objc func handleGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
@@ -53,7 +81,7 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
         switch gestureRecognizer.state {
         case .began:
             wantsInteractiveStart = true
-            targetViewController?.dismiss(animated: true, completion: nil)
+            dismissView()
         case .changed:
             update(progress)
         case .cancelled:
@@ -70,21 +98,21 @@ class InteractiveAnimation: UIPercentDrivenInteractiveTransition {
             break
         }
     }
+}
 
-    private func computeGestureValue(by point: CGPoint) -> CGFloat {
-        switch direction {
-        case .up:
-            return -point.y
-        case .down:
-            return point.y
-        case .left:
-            return -point.x
-        case .right:
-            return point.x
+// MARK: - private
+extension InteractiveAnimation {
+    private func dismissView() {
+        switch interactiveType {
+        case .navigation:
+            targetViewController?.navigationController?.popViewController(animated: true)
+        case .presentation:
+            targetViewController?.dismiss(animated: true)
         }
     }
 }
 
+// MARK: - UIGestureRecognizerDelegate
 extension InteractiveAnimation: UIGestureRecognizerDelegate {
     
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {

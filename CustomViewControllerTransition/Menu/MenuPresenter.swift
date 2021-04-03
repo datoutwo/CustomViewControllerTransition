@@ -10,6 +10,7 @@ import Foundation
 protocol MenuPresenterProtocol: AnyObject {
     func notifyViewDidLoad()
     func didSelect(data: MenuData)
+    func notifyDidTapGoButton()
 }
 
 final class MenuPresenter: MenuPresenterProtocol {
@@ -27,6 +28,10 @@ final class MenuPresenter: MenuPresenterProtocol {
     func didSelect(data: MenuData) {
         let args = MenuDetailViewControllerArgs(data: data, delegate: self)
         router.openDetail(args: args)
+    }
+
+    func notifyDidTapGoButton() {
+        router.openInfo()
     }
 }
 

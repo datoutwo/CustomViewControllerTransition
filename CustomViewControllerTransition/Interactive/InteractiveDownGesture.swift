@@ -1,16 +1,16 @@
 //
-//  InteractiveLeftGesture.swift
+//  InteractiveDownGesture.swift
 //  CustomViewControllerTransition
 //
-//  Created by Delan Wang on 2021/4/2.
+//  Created by Delan Wang on 2021/4/3.
 //
 
 import UIKit
 
-final class InteractiveLeftGesture: InteractiveAnimation {
+final class InteractiveDownGesture: InteractiveAnimation {
     
     init(targetViewController: UIViewController, interactiveType: InteractiveType) {
-        super.init(targetViewController: targetViewController, direction: .left, interactiveType: interactiveType)
+        super.init(targetViewController: targetViewController, direction: .down, interactiveType: interactiveType)
     }
 
     @objc override func handleGesture(_ gestureRecognizer: UIPanGestureRecognizer) {
@@ -18,6 +18,6 @@ final class InteractiveLeftGesture: InteractiveAnimation {
     }
 
     override func shouldCompleteTransition(distance: CGFloat, velocity: CGFloat) -> Bool {
-        return velocity > 150 || (distance / viewWidth) > 0.5
+        return velocity > 200 || (distance / viewHeight) > 0.5
     }
 }
