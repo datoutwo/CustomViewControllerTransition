@@ -7,11 +7,13 @@
 
 import UIKit
 
-protocol MenuDataTableViewProtocol: UITableViewDelegate, UITableViewDataSource {}
+protocol MenuDataTableViewProtocol: UITableViewDelegate, UITableViewDataSource {
+    var selectedCell: MenuCell? { get }
+}
 
 final class MenuDataTableView: NSObject, MenuDataTableViewProtocol {
     weak var presenter: MenuPresenterProtocol?
-
+    var selectedCell: MenuCell?
     private let tableData: [MenuData] = [
         MenuData(title: "Ocean", description: "This is Ocean", image: UIImage(named: "A")),
         MenuData(title: "Mountain", description: "This is Mountain", image: UIImage(named: "B")),
@@ -34,6 +36,8 @@ final class MenuDataTableView: NSObject, MenuDataTableViewProtocol {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        guard let cell = tableView.cellForRow(at: indexPath) as? MenuCell else { return }
+        selectedCell = cell
         presenter?.didSelect(data: tableData[indexPath.row])
     }
 }

@@ -27,7 +27,6 @@ extension CustomAnimation: UIViewControllerTransitioningDelegate {
     }
 
     func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        
         return interactive
     }
 }

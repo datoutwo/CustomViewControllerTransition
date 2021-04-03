@@ -65,7 +65,12 @@ extension MenuViewController: TransitionAnimationProtocol {
     }
     
     var transitionFrame: CGRect? {
-        return nil
+        guard let selectedCell = source.selectedCell else {
+            return nil
+        }
+        let containerFrame = selectedCell.convert(selectedCell.containerView.frame, to: tableView)
+        let cellFrame = tableView.convert(containerFrame, to: view)
+        return cellFrame
     }
     
     func transitionDidStart(_ type: TransitionType) {}

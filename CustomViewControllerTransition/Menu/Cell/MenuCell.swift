@@ -8,6 +8,7 @@
 import UIKit
 
 class MenuCell: UITableViewCell {
+    @IBOutlet var containerView: InspectableView!
     @IBOutlet var ingredientImageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!

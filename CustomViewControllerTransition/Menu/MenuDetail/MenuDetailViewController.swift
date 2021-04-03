@@ -43,15 +43,15 @@ extension MenuDetailViewController: StoryboardLoadable {
 
 extension MenuDetailViewController: TransitionAnimationProtocol {
     var appearingTransition: TransitionAnimation? {
-        return TransitionFlip(transitionType: .appear, duration: 1.0)
+        return TransitionCellStyle(transitionType: .appear, duration: 1.0)
     }
     
     var disappearingTransition: TransitionAnimation? {
-        TransitionFlip(transitionType: .disappear, duration: 1.0)
+        return TransitionCellStyle(transitionType: .disappear, duration: 1.0)
     }
     
     var transitionFrame: CGRect? {
-        return nil
+        return imageView.frame
     }
     
     func transitionDidStart(_ type: TransitionType) {}

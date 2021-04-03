@@ -35,19 +35,19 @@ final class MenuRouter: MenuRouterProtocol {
         self.detailTransition = CustomAnimation(interactive: interactive)
         menuDetailViewController.transitioningDelegate = detailTransition
         menuDetailViewController.modalPresentationStyle = .fullScreen
-        view?.navigationController?.present(menuDetailViewController, animated: true, completion: nil)
+        view?.present(menuDetailViewController, animated: true, completion: nil)
     }
 
     func openInfo() {
         let infoViewController = infoViewControllerFactory.make()
         let interactive = InteractiveRightGesture(targetViewController: infoViewController, interactiveType: .navigation)
         self.showInfoTransition = CustomAnimation(interactive: interactive)
-        view?.navigationController?.delegate = popInfoTransition
+        view?.navigationController?.delegate = showInfoTransition
         view?.navigationController?.show(infoViewController, sender: nil)
-        infoViewController.navigationController?.delegate = popInfoTransition
+        infoViewController.navigationController?.delegate = showInfoTransition
     }
 
     func dismissView() {
-        view?.navigationController?.dismiss(animated: true, completion: nil)
+        view?.dismiss(animated: true, completion: nil)
     }
 }
