@@ -35,11 +35,11 @@ extension InfoViewController: StoryboardLoadable {
 
 extension InfoViewController: TransitionAnimationProtocol {
     var appearingTransition: TransitionAnimation? {
-        return TransitionZoomIn(transitionType: .appear, duration: 1.0)
+        return TransitionWolt(transitionType: .appear, duration: 1.0)
     }
     
     var disappearingTransition: TransitionAnimation? {
-        return TransitionZoomOut(transitionType: .disappear, duration: 1.0)
+        return TransitionWolt(transitionType: .disappear, duration: 1.0)
     }
     
     var transitionFrame: CGRect? {

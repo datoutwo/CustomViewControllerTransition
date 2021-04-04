@@ -43,7 +43,6 @@ final class MenuRouter: MenuRouterProtocol {
         self.showInfoTransition = CustomAnimation(interactive: interactive)
         view?.navigationController?.delegate = showInfoTransition
         view?.navigationController?.show(infoViewController, sender: nil)
-        infoViewController.navigationController?.delegate = showInfoTransition
     }
 
     func dismissView() {

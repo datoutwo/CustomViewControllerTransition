@@ -30,6 +30,7 @@
 		7F952BEC26188C05001CC17A /* InfoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BEB26188C05001CC17A /* InfoPresenter.swift */; };
 		7F952BF02618BAA5001CC17A /* TransitionCellStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BEF2618BAA5001CC17A /* TransitionCellStyle.swift */; };
 		7F952BF6261908D2001CC17A /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BF5261908D2001CC17A /* CustomNavigationController.swift */; };
+		7F952BFA261A3B0A001CC17A /* TransitionWolt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F952BF9261A3B0A001CC17A /* TransitionWolt.swift */; };
 		7FCAC49725EAD14300D07930 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAC49625EAD14300D07930 /* AppDelegate.swift */; };
 		7FCAC49B25EAD14300D07930 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAC49A25EAD14300D07930 /* MenuViewController.swift */; };
 		7FCAC49E25EAD14300D07930 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FCAC49C25EAD14300D07930 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		7F952BEB26188C05001CC17A /* InfoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPresenter.swift; sourceTree = "<group>"; };
 		7F952BEF2618BAA5001CC17A /* TransitionCellStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCellStyle.swift; sourceTree = "<group>"; };
 		7F952BF5261908D2001CC17A /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		7F952BF9261A3B0A001CC17A /* TransitionWolt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionWolt.swift; sourceTree = "<group>"; };
 		7FCAC49325EAD14300D07930 /* CustomViewControllerTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewControllerTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FCAC49625EAD14300D07930 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FCAC49A25EAD14300D07930 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				7F381F682607E0C2006BAD91 /* TransitionCrossDissolve.swift */,
 				7F381F6B2607E1B2006BAD91 /* TransitionFlip.swift */,
 				7F952BEF2618BAA5001CC17A /* TransitionCellStyle.swift */,
+				7F952BF9261A3B0A001CC17A /* TransitionWolt.swift */,
 			);
 			path = Transition;
 			sourceTree = "<group>";
@@ -166,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				7FCAC49625EAD14300D07930 /* AppDelegate.swift */,
-				7F952BF5261908D2001CC17A /* CustomNavigationController.swift */,
 				7FCAC4BD25EAE1B700D07930 /* Menu */,
 				7FCAC49C25EAD14300D07930 /* Main.storyboard */,
 				7FCAC4BB25EAE17C00D07930 /* Resources */,
@@ -181,6 +183,7 @@
 		7FCAC4B825EAE15E00D07930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7F952BF5261908D2001CC17A /* CustomNavigationController.swift */,
 				7FCAC4AC25EADB3A00D07930 /* InspectableView.swift */,
 				7FCAC4B225EADEDA00D07930 /* UITableViewExt.swift */,
 				7FCAC4B525EADF3700D07930 /* Loadable.swift */,
@@ -297,6 +300,7 @@
 			files = (
 				7F952BF6261908D2001CC17A /* CustomNavigationController.swift in Sources */,
 				7F952BE126183DE4001CC17A /* InteractiveDownGesture.swift in Sources */,
+				7F952BFA261A3B0A001CC17A /* TransitionWolt.swift in Sources */,
 				7F7AD67E25FE8DA600365C44 /* CustomAnimation.swift in Sources */,
 				7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */,
 				7F141591261793F2007F3542 /* InteractiveLeftGesture.swift in Sources */,
