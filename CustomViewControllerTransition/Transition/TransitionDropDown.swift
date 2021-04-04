@@ -28,8 +28,6 @@ final class TransitionDropDown: TransitionAnimation {
         }
         let containerView = transitionContext.containerView
         
-        containerView.insertSubview(toView, belowSubview: fromView)
-        
         switch transitionType {
         case .appear:
             containerView.insertSubview(toView, aboveSubview: fromView)
