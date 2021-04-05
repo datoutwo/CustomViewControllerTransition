@@ -52,28 +52,3 @@ extension MenuViewController {
 extension MenuViewController: StoryboardLoadable {
     static var storyboard: MenuStoryboard = .main
 }
-
-// MARK: - TransitionAnimationProtocol
-
-extension MenuViewController: TransitionAnimationProtocol {
-    var appearingTransition: TransitionAnimation? {
-        return TransitionZoomIn(transitionType: .appear, duration: 1.0)
-    }
-    
-    var disappearingTransition: TransitionAnimation? {
-        return nil
-    }
-    
-    var transitionFrame: CGRect? {
-        guard let selectedCell = source.selectedCell else {
-            return nil
-        }
-        let containerFrame = selectedCell.convert(selectedCell.containerView.frame, to: tableView)
-        let cellFrame = tableView.convert(containerFrame, to: view)
-        return cellFrame
-    }
-    
-    func transitionDidStart(_ type: TransitionType) {}
-    
-    func transitionDidEnd(_ type: TransitionType) {}
-}

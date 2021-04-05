@@ -38,23 +38,3 @@ final class MenuDetailViewController: UIViewController, MenuDetailView  {
 extension MenuDetailViewController: StoryboardLoadable {
     static var storyboard: MenuStoryboard = .main
 }
-
-// MARK: - TransitionAnimationProtocol
-
-extension MenuDetailViewController: TransitionAnimationProtocol {
-    var appearingTransition: TransitionAnimation? {
-        return TransitionCellStyle(transitionType: .appear, duration: 1.0)
-    }
-    
-    var disappearingTransition: TransitionAnimation? {
-        return TransitionCellStyle(transitionType: .disappear, duration: 1.0)
-    }
-    
-    var transitionFrame: CGRect? {
-        return imageView.frame
-    }
-    
-    func transitionDidStart(_ type: TransitionType) {}
-    
-    func transitionDidEnd(_ type: TransitionType) {}
-}

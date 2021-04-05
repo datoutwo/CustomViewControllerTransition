@@ -15,6 +15,9 @@
 		7F381F692607E0C2006BAD91 /* TransitionCrossDissolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F682607E0C2006BAD91 /* TransitionCrossDissolve.swift */; };
 		7F381F6C2607E1B2006BAD91 /* TransitionFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F6B2607E1B2006BAD91 /* TransitionFlip.swift */; };
 		7F381F8226173508006BAD91 /* InteractiveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F381F8126173508006BAD91 /* InteractiveAnimation.swift */; };
+		7F5DE599261B204600EA4188 /* MyCustomAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DE598261B204600EA4188 /* MyCustomAnimation.swift */; };
+		7F5DE59C261B215200EA4188 /* MyCustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DE59B261B215200EA4188 /* MyCustomTransition.swift */; };
+		7F5DE5A0261B27F000EA4188 /* MyInteractive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5DE59F261B27F000EA4188 /* MyInteractive.swift */; };
 		7F7AD66625FD190A00365C44 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7AD66525FD190A00365C44 /* MenuCell.xib */; };
 		7F7AD66A25FD280A00365C44 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD66925FD280A00365C44 /* MenuData.swift */; };
 		7F7AD66E25FD311200365C44 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7AD66D25FD311200365C44 /* MenuDetailViewController.swift */; };
@@ -56,6 +59,9 @@
 		7F381F682607E0C2006BAD91 /* TransitionCrossDissolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionCrossDissolve.swift; sourceTree = "<group>"; };
 		7F381F6B2607E1B2006BAD91 /* TransitionFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionFlip.swift; sourceTree = "<group>"; };
 		7F381F8126173508006BAD91 /* InteractiveAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveAnimation.swift; sourceTree = "<group>"; };
+		7F5DE598261B204600EA4188 /* MyCustomAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomAnimation.swift; sourceTree = "<group>"; };
+		7F5DE59B261B215200EA4188 /* MyCustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomTransition.swift; sourceTree = "<group>"; };
+		7F5DE59F261B27F000EA4188 /* MyInteractive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInteractive.swift; sourceTree = "<group>"; };
 		7F7AD66525FD190A00365C44 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
 		7F7AD66925FD280A00365C44 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		7F7AD66D25FD311200365C44 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
@@ -169,13 +175,15 @@
 			isa = PBXGroup;
 			children = (
 				7FCAC49625EAD14300D07930 /* AppDelegate.swift */,
+				7F5DE598261B204600EA4188 /* MyCustomAnimation.swift */,
+				7F5DE59B261B215200EA4188 /* MyCustomTransition.swift */,
+				7F5DE59F261B27F000EA4188 /* MyInteractive.swift */,
 				7FCAC4BD25EAE1B700D07930 /* Menu */,
+				7F7AD67025FD311B00365C44 /* MenuDetail */,
+				7F952BE626188B95001CC17A /* Info */,
 				7FCAC49C25EAD14300D07930 /* Main.storyboard */,
 				7FCAC4BB25EAE17C00D07930 /* Resources */,
 				7FCAC4B825EAE15E00D07930 /* Utils */,
-				7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */,
-				7F381F5C2607A7CE006BAD91 /* Transition */,
-				7F381F8426173A53006BAD91 /* Interactive */,
 			);
 			path = CustomViewControllerTransition;
 			sourceTree = "<group>";
@@ -183,6 +191,9 @@
 		7FCAC4B825EAE15E00D07930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */,
+				7F381F5C2607A7CE006BAD91 /* Transition */,
+				7F381F8426173A53006BAD91 /* Interactive */,
 				7F952BF5261908D2001CC17A /* CustomNavigationController.swift */,
 				7FCAC4AC25EADB3A00D07930 /* InspectableView.swift */,
 				7FCAC4B225EADEDA00D07930 /* UITableViewExt.swift */,
@@ -211,8 +222,6 @@
 				7FCAC4D025EBF00100D07930 /* MenuDataTableView.swift */,
 				7F7AD66925FD280A00365C44 /* MenuData.swift */,
 				7FCAC4D325EC197E00D07930 /* Cell */,
-				7F7AD67025FD311B00365C44 /* MenuDetail */,
-				7F952BE626188B95001CC17A /* Info */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -326,12 +335,15 @@
 				7F7AD66E25FD311200365C44 /* MenuDetailViewController.swift in Sources */,
 				7FCAC4D125EBF00100D07930 /* MenuDataTableView.swift in Sources */,
 				7FCAC4B325EADEDA00D07930 /* UITableViewExt.swift in Sources */,
+				7F5DE59C261B215200EA4188 /* MyCustomTransition.swift in Sources */,
 				7F381F6C2607E1B2006BAD91 /* TransitionFlip.swift in Sources */,
 				7FCAC4B025EADDE200D07930 /* MenuCell.swift in Sources */,
 				7FCAC4AD25EADB3A00D07930 /* InspectableView.swift in Sources */,
 				7FCAC49725EAD14300D07930 /* AppDelegate.swift in Sources */,
 				7F7AD67225FD313800365C44 /* MenuDetailViewControllerFactory.swift in Sources */,
 				7F952BE426188B8D001CC17A /* InfoViewController.swift in Sources */,
+				7F5DE599261B204600EA4188 /* MyCustomAnimation.swift in Sources */,
+				7F5DE5A0261B27F000EA4188 /* MyInteractive.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L5K8TKMC9S;
+				DEVELOPMENT_TEAM = 35MAUM7BVU;
 				INFOPLIST_FILE = CustomViewControllerTransition/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

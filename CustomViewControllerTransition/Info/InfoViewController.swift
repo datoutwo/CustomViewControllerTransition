@@ -32,21 +32,3 @@ final class InfoViewController: UIViewController, InfoView {
 extension InfoViewController: StoryboardLoadable {
     static var storyboard: MenuStoryboard = .main
 }
-
-extension InfoViewController: TransitionAnimationProtocol {
-    var appearingTransition: TransitionAnimation? {
-        return TransitionWolt(transitionType: .appear, duration: 1.0)
-    }
-    
-    var disappearingTransition: TransitionAnimation? {
-        return TransitionWolt(transitionType: .disappear, duration: 1.0)
-    }
-    
-    var transitionFrame: CGRect? {
-        return nil
-    }
-    
-    func transitionDidStart(_ type: TransitionType) {}
-    
-    func transitionDidEnd(_ type: TransitionType) {}
-}
