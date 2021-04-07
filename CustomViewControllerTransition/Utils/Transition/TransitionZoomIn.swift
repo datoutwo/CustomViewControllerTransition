@@ -58,8 +58,6 @@ final class TransitionZoomIn: TransitionAnimation {
             
             if isCancelled {
                 toView.removeFromSuperview()
-            } else {
-                containerView.insertSubview(toView, belowSubview: fromView)
             }
             transitionContext.completeTransition(!isCancelled)
         }
