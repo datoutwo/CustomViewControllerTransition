@@ -175,6 +175,10 @@
 			isa = PBXGroup;
 			children = (
 				7FCAC49625EAD14300D07930 /* AppDelegate.swift */,
+				7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */,
+				7F381F5C2607A7CE006BAD91 /* Transition */,
+				7F381F8426173A53006BAD91 /* Interactive */,
+				7F952BF5261908D2001CC17A /* CustomNavigationController.swift */,
 				7F5DE598261B204600EA4188 /* MyCustomAnimation.swift */,
 				7F5DE59B261B215200EA4188 /* MyCustomTransition.swift */,
 				7F5DE59F261B27F000EA4188 /* MyInteractive.swift */,
@@ -191,10 +195,6 @@
 		7FCAC4B825EAE15E00D07930 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				7F7AD67D25FE8DA600365C44 /* CustomAnimation.swift */,
-				7F381F5C2607A7CE006BAD91 /* Transition */,
-				7F381F8426173A53006BAD91 /* Interactive */,
-				7F952BF5261908D2001CC17A /* CustomNavigationController.swift */,
 				7FCAC4AC25EADB3A00D07930 /* InspectableView.swift */,
 				7FCAC4B225EADEDA00D07930 /* UITableViewExt.swift */,
 				7FCAC4B525EADF3700D07930 /* Loadable.swift */,
