@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate {
     private func showMenuViewController() {
+        // ADD TEST
         let menuDetailViewControllerFactory = MenuDetailViewControllerFactory()
         let infoViewControllerFactory = InfoViewControllerFactory()
         let factory = MenuFactory(
