@@ -20,3 +20,9 @@ jobs:
           configuration-path: .github/pr-labeler.yml # optional, .github/pr-labeler.yml is the default value
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  add-reviews:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: kentaro-m/auto-assign-action@v1.1.2
+        with:
+          configuration-path: ".github/some_name_for_configs.yml"
